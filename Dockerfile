@@ -43,4 +43,4 @@ EXPOSE 27015-27030/tcp
 #USER steam
 #ENTRYPOINT ["bash"]
 WORKDIR /home/steam/mesa/
-CMD ["bash", "-c", "/home/steam/start.sh"]
+CMD ["/home/steam/start.sh"]
