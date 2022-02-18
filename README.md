@@ -1,5 +1,6 @@
 # black-mesa-docker
 Docker image for a black mesa dedicated server.
+> currently only set-up and tested for LAN.
 
 ___
 
