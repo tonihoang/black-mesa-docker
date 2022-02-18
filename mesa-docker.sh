@@ -1,4 +1,4 @@
-docker run -d \
+docker container run -td \
     --name mesa-server \
     -p 27015-27030:27015-27030/udp \
     -p 27015-27030:27015-27030/tcp \
