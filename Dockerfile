@@ -36,11 +36,12 @@ RUN wget https://mms.alliedmods.net/mmsdrop/1.11/mmsource-1.11.0-git1143-linux.t
 WORKDIR /home/steam/
 
 ADD start.sh /home/steam/start.sh
-#RUN chmod 755 /home/steam/start.sh
+ADD server.cfg /home/steam/server.cfg
+RUN mv /home/steam/mesa/bms/cfg/server.cfg /home/steam/mesa/bms/cfg/server.cfg.bck \
+    && mv /home/steam/server.cfg /home/steam/mesa/bms/cfg/server.cfg
 
 EXPOSE 27015-27030/udp
 EXPOSE 27015-27030/tcp
-#USER steam
 #ENTRYPOINT ["bash"]
 WORKDIR /home/steam/mesa/
 CMD ["/home/steam/start.sh"]
