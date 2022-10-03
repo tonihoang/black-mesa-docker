@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt update
-RUN apt -y full-upgrade
+# RUN apt -y full-upgrade
 RUN apt -y install wget unzip lib32gcc1 lib32stdc++6 screen
 
 RUN adduser steam
@@ -24,14 +24,12 @@ RUN mkdir -p /home/steam/.steam \
 
 WORKDIR /home/steam/mesa
 
-RUN wget https://mms.alliedmods.net/mmsdrop/1.11/mmsource-1.11.0-git1143-linux.tar.gz \
-    && tar -xvzf mmsource-1.11.0-git1143-linux.tar.gz -C /home/steam/mesa/bms \
-    && wget https://sm.alliedmods.net/smdrop/1.11/sourcemod-1.11.0-git6645-linux.tar.gz \
-    && tar -xvzf sourcemod-1.11.0-git6645-linux.tar.gz -C /home/steam/mesa/bms \
-    && wget https://github.com/peace-maker/DHooks2/releases/download/v2.2.0-detours15/dhooks-2.2.0-detours15-sm110.zip \
-    && unzip dhooks-2.2.0-detours15-sm110.zip -d /home/steam/mesa/bms \
-    && wget https://github.com/ampreeT/SourceCoop/releases/download/v1.0.4/sourcecoop-1.0.4.zip \
-    && unzip sourcecoop-1.0.4.zip -d /home/steam/mesa/bms
+RUN wget https://mms.alliedmods.net/mmsdrop/1.12/mmsource-1.12.0-git1161-linux.tar.gz \
+    && tar -xvzf mmsource-1.12.0-git1161-linux.tar.gz -C /home/steam/mesa/bms \
+    && wget https://sm.alliedmods.net/smdrop/1.12/sourcemod-1.12.0-git6925-linux.tar.gz \
+    && tar -xvzf sourcemod-1.12.0-git6925-linux.tar.gz -C /home/steam/mesa/bms \
+    && wget https://github.com/ampreeT/SourceCoop/releases/download/v1.1.2/sourcecoop-1.1.2.zip \
+    && unzip sourcecoop-1.1.2.zi -d /home/steam/mesa/bms
 
 WORKDIR /home/steam/
 
