@@ -29,7 +29,7 @@ RUN wget https://mms.alliedmods.net/mmsdrop/1.12/mmsource-1.12.0-git1161-linux.t
     && wget https://sm.alliedmods.net/smdrop/1.12/sourcemod-1.12.0-git6925-linux.tar.gz \
     && tar -xvzf sourcemod-1.12.0-git6925-linux.tar.gz -C /home/steam/mesa/bms \
     && wget https://github.com/ampreeT/SourceCoop/releases/download/v1.1.2/sourcecoop-1.1.2.zip \
-    && unzip sourcecoop-1.1.2.zi -d /home/steam/mesa/bms
+    && unzip sourcecoop-1.1.2.zip -d /home/steam/mesa/bms
 
 WORKDIR /home/steam/
 
